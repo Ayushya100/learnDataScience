@@ -17,6 +17,9 @@ const port = process.env.port || 3000;
 const api = '/api/v1/blogs'
 
 // Routes
+const getAllBlogs = require('../routes/getAllBlogs');
+
+app.use(`${api}/getAllBlogs`, getAllBlogs);
 
 app.listen(port, () => {
     console.log(`Connection has started at port: ${port}`);
