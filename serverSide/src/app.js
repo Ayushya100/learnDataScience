@@ -21,11 +21,13 @@ const getAllBlogs = require('../routes/getAllBlogs');
 const getBlogsById = require('../routes/getBlogsById');
 const createBlogs = require('../routes/createBlogs');
 const updateBlogs = require('../routes/updateBlogs');
+const updateViews = require('../routes/updateViews');
 
 app.use(`${api}/getAllBlogs`, getAllBlogs);
 app.use(`${api}/getBlogsById`, getBlogsById);
 app.use(`${api}`, createBlogs);
 app.use(`${api}/updateBlogs`, updateBlogs);
+app.use(`${api}/updateViews`, updateViews);
 
 app.listen(port, () => {
     console.log(`Connection has started at port: ${port}`);
