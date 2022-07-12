@@ -19,9 +19,11 @@ const api = '/api/v1/blogs'
 // Routes
 const getAllBlogs = require('../routes/getAllBlogs');
 const getBlogsById = require('../routes/getBlogsById');
+const createBlogs = require('../routes/createBlogs');
 
 app.use(`${api}/getAllBlogs`, getAllBlogs);
 app.use(`${api}/getBlogsById`, getBlogsById);
+app.use(`${api}`, createBlogs);
 
 app.listen(port, () => {
     console.log(`Connection has started at port: ${port}`);
