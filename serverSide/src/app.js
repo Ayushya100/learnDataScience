@@ -22,12 +22,14 @@ const getBlogsById = require('../routes/getBlogsById');
 const createBlogs = require('../routes/createBlogs');
 const updateBlogs = require('../routes/updateBlogs');
 const updateViews = require('../routes/updateViews');
+const updateLikes = require('../routes/updateLikes');
 
 app.use(`${api}/getAllBlogs`, getAllBlogs);
 app.use(`${api}/getBlogsById`, getBlogsById);
 app.use(`${api}`, createBlogs);
 app.use(`${api}/updateBlogs`, updateBlogs);
 app.use(`${api}/updateViews`, updateViews);
+app.use(`${api}/updateLikes`, updateLikes);
 
 app.listen(port, () => {
     console.log(`Connection has started at port: ${port}`);
